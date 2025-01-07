@@ -1,0 +1,595 @@
+*{
+    box-sizing: border-box !important;
+    padding: 0  !important;
+    margin: 0  !important ;
+}
+body{
+    background-color:#141414 !important;
+    overflow-x: hidden !important;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.13);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #39f30e, #c4fac7, #39f30e);
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(65, 65, 65, 0.3);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #c4fac7, #39f30e, #c4fac7);
+}
+@font-face {
+    font-family: 'Font1';
+    src: url('../Fonts/Fontspring-DEMO-agilesans-extrabolditalic.otf') format('opentype')
+}
+@font-face {
+    font-family: 'Font2';
+    src: url('../Fonts/Fontspring-DEMO-agilesans-lightitalic.otf')  format('woff2')
+}
+@font-face {
+    font-family: 'Font3';
+    src: url('../Fonts/police1.ttf')  format('truetype')
+}
+@font-face {
+    font-family: 'Font4';
+    src: url('../Fonts/police2.ttf') format('opentype')
+}
+
+@media (max-width: 742px){
+    .navbar-brand{
+        margin:0 0 0 15px!important;
+    }
+    .navbar-toggler{
+        margin:0 15px 0 0 !important;
+    }
+    .amarg-div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .nav-link{
+        margin-bottom: 8px !important;
+    }
+}
+/*--------------------------- Barre de navigation-------------------------------------*/
+.navbar {
+    background-color: #141414 !important;
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid rgba(93, 93, 93, 0.29);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.collapse{
+    padding-left:1.2rem !important; ;
+}
+
+/* Style de la marque (logo) */
+.navbar-brand {
+    color: #3ff60c !important;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+/* Styles des liens de navigation */
+.nav-link {
+    color: #ffffff !important;
+    border: 1px solid transparent !important;
+    font-family: 'Font4', Arial, sans-serif;
+    font-size: 20px !important;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3ff60c !important;
+    border-bottom: 1px solid #3ff60c !important;
+}
+
+/* Style du bouton de navigation (toggler) */
+.navbar-toggler {
+    color: #3ff60c !important;
+    border: 1px solid #3ff60c !important;
+    padding: 0.5rem !important;
+}
+
+/* Style de l'icône du bouton de navigation */
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    background-color: transparent !important;
+}
+
+.navbar-toggler-icon::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 -6px 0 white, 0 6px 0 white;
+}
+
+/*------------------------- non du site animé -----------------------*/
+.container > a {
+    font-family: 'Font1', Arial, sans-serif;
+    font-size: 35px;
+    background-image: url("../Pic/BG_title.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: background_mouvement 40s infinite;
+}
+
+/*------------- bouton Sign Up ------------------*/
+.BtnSign {
+    position: relative;
+    overflow: hidden;
+    background-color: #79f60c !important;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: bold !important;
+    border: none;
+    padding: 0.5rem 1rem !important;
+    transition: transform 0.3s ease;
+}
+
+.BtnSign:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(21, 21, 21);
+    border: 1px solid #000000;
+    border-radius: 0 25px 0 0;
+    transform: scaleY(0) scaleX(0);
+    transform-origin: left bottom;
+    transition: transform 1s;
+    z-index: -1;
+}
+
+.BtnSign:hover {
+    color: #3ff60c !important;
+}
+
+
+.BtnSign:hover:before {
+    transform: scaleY(1) scaleX(1);
+}
+
+.BtnSign:active {
+    transform: scale(0.95);
+}
+
+/*----------------------------bouton Log In---------------------- */
+.BtnLog {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #79f60c !important;
+    font-weight: bold !important;
+    color: #79f60c !important;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0.5rem 1rem !important;
+    transition: transform 0.3s ease;
+}
+
+.BtnLog:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #79f60c;
+    border: 1px solid #79f60c;
+    border-radius: 0 25px 0 0;
+    transform: scaleY(0) scaleX(0);
+    transform-origin: left bottom;
+    transition: transform 1s;
+    z-index: -1;
+}
+
+.BtnLog:hover {
+    color: black !important;
+}
+
+.BtnLog:hover::before {
+    transform: scaleY(1) scaleX(1);
+}
+
+.BtnLog:active {
+    transform: scale(0.95);
+}
+/*----------------------- Les offres -------------------- *!*/
+h1 {
+    font-family: 'Font2', Arial, sans-serif;
+    color: #ffffff !important;
+    font-size: 3em !important;
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    width: 100%;
+}
+
+/*--------------------- boîte de message --------------------*/
+.message {
+    font-family: 'Font2', Arial, sans-serif;
+    color: #ffffff !important;
+    border: 2px solid #3ff60c;
+    border-radius: 8px;
+    width: 80% !important;
+    max-width: 100%;
+    text-align: center;
+    padding: 20px !important;
+    /*margin: 0 auto !important;*/
+    background-color: rgba(0, 0, 0, 0.3); /* Fond semi-transparent */
+}
+
+.message h4 {
+    font-family: 'Font2', Arial, sans-serif;
+    color: #ffffff !important;
+    margin: 0;
+    padding-top: 15px !important;
+    font-size: 1.5em;
+}
+
+.message p {
+    font-family: 'Font2', Arial, sans-serif;
+    color: #ffffff !important;
+    margin: 0 !important;
+    padding-top: 10px !important;
+    font-size: 1.2em;
+}
+
+/*------------------- section principale ----------------- */
+.part {
+    max-width: 100%;
+    padding: 80px 20px !important;
+    background-color: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*---------------------la section des plans------------------ */
+.plans {
+    background-color: #3ff60c;
+    padding: 20px 0 !important;
+}
+
+/* -------------(Monthly/Annual) -----------*/
+.Typecard {
+    margin: 30px !important;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+}
+
+.Typecard span {
+    background-color: #1b1b1b;
+    padding: 10px 8px !important;
+    border-radius: 50px;
+    font-family: 'Font2', Arial, sans-serif;
+    margin-top: 20px !important;
+}
+
+.Typecard a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 9px !important;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Typecard a:hover {
+    background-color: #ffffff;
+    color: #141414;
+}
+
+/* ----------------les cartes-----------------*/
+.card {
+    background-color: white;
+    border-radius: 7px;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.titelOFcard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Font1', Arial, sans-serif;
+    padding: 15px 20px !important;
+}
+
+.titelOFcard h2 {
+    font-family: 'Font1', Arial, sans-serif;
+    color: white;
+    background-color: #3ff60c;
+    padding: 5px 10px !important;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.titelOFcard a {
+    color: #838181;
+    font-family: 'Font2', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.subtitle {
+    color: #141414;
+    font-size: 22px;
+    margin: 20px !important;
+    font-family: 'Font2', Arial, sans-serif;
+}
+
+.price {
+    color: #141414;
+    margin: 20px !important;
+    font-family: 'Font2', Arial, sans-serif;
+}
+
+.BtnTry {
+    background-color: #141414;
+    border-radius: 10px;
+    margin: 20px !important;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.BtnTry a {
+    text-decoration: none;
+    color: white;
+    padding: 10px !important;
+    display: block;
+    font-family: 'Font2', Arial, sans-serif;
+}
+
+.BtnTry:hover {
+    background-color: #1b1b1b; /* Effet de survol */
+}
+
+.paid {
+    color: #141414;
+    margin: 0 20px 20px !important;
+    font-family: 'Font2', Arial, sans-serif;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+/**************** Gift card****************/
+.GiftCard {
+    width: 100%;
+    min-height: 60vh;
+    color: #141414;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px !important;
+}
+
+/*--------------------------- titre de la section ------------*/
+.gift_part-h1 {
+    font-family: 'Font1', Arial, sans-serif;
+    color: #141414 !important;
+    font-size: 4em !important;
+    margin-bottom: 20px !important;
+}
+
+/*----------------------- contenu de la section ------------------------------*/
+.gift_part {
+    /*margin: auto;*/
+    text-align: center;
+}
+
+.gift_part h5 {
+    color: #838181;
+    font-family: 'Font2', Arial, sans-serif;
+    margin-bottom: 30px !important;
+}
+
+/* Styles pour les boutons */
+.contentBTN, .ActivateBTN {
+    padding: 10px 30px !important;
+    border-radius: 10px;
+    font-family: 'Font2', Arial, sans-serif;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contentBTN {
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+.contentBTN:hover {
+    background-color: #333333;
+}
+
+.ActivateBTN {
+    background-color: #eeecec;
+    color: #141414;
+}
+
+.ActivateBTN:hover {
+    background-color: #dcdcdc;
+}
+
+
+/* Styles pour les images */
+.image {
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50vh !important;
+}
+.image .img1 {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.73);
+    animation: Haut_bas_img1 5s infinite;
+    animation-delay:1s;
+}
+.image .img2 {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 35%;
+    border-radius: 10px;
+    z-index: 99;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.73);
+    animation: Haut_bas_img2 5s infinite;
+    animation-delay:1.5s;
+}
+
+.image .img3 {
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.73);
+    animation: Haut_bas_img3 5s infinite;
+    animation-delay:2s;
+}
+.rond{
+    background-color: #ffffff;
+    padding: 6rem 0 !important;
+    border-bottom-right-radius: 20% !important;
+    border-bottom-left-radius: 20% !important;
+}
+/*---------------  Article  ------------------*/
+.txt{
+    font-size: 15px;
+    color: #838181;
+    padding: 40px;
+    width: 100%;
+    margin-bottom: 4rem !important;
+    margin-top: 6rem !important;
+}
+.txt P{
+    text-align: center;
+}
+.p_offer{
+    border-bottom: 1px solid #525252;
+}
+/*-------------------------------footer-------------------------------*/
+.footer {
+    width: 100%;
+    color: #e4e2e2;
+    font-family: 'Font2', Arial, sans-serif;
+    background-color: #141414;
+    padding: 4rem 0 !important;
+}
+
+/*-------------------les éléments du footer-------------------- */
+.footerItems {
+    margin-bottom: 4rem !important;
+}
+
+.footerItems p {
+    color: #838181;
+    margin: 10px 0;
+}
+
+.footerItems a {
+    text-decoration: none;
+    color: #838181;
+    display: block;
+    margin: 1.5rem 0 !important;
+    transition: color 0.3s ease;
+}
+
+.footerItems a:hover {
+    color: #3ff60c;
+}
+
+.footerItems-title {
+    font-family: 'Font1', Arial, sans-serif;
+    color: #dbdbdb;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.items-end {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/*--------------------- le dernier Div---------------------*/
+.amarg-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    color: #fff;
+    border-radius: 10px;
+    font-family: 'Font2', Arial, sans-serif;
+    padding: 20px;
+    gap: 20px;
+}
+.amarg-div h6,
+.amarg-div .social-icons a {
+    font-family: 'Font1', Arial, sans-serif;
+    font-size: 30px;
+    background-image: url("../Pic/BG_title.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: background_mouvement 60s infinite;
+    margin: 0;
+}
+.amarg-div span {
+    color: #6e6e6e;
+    font-size: 14px;
+    text-align: center;
+}
+.amarg-div span a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+.amarg-div span a:hover {
+    color: #3ff60c;
+    text-decoration: underline;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icons a {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: #3ff60c;
+}

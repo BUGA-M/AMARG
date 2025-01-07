@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Équipe Rijal">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMARG | Log in and Sign up</title>
+    <link rel="icon" href="Pic/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/formulaire.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!------------------------------div du loading-------------------------------->
+<div id="loading-overlay">
+    <div id="loading-logo">
+        <div><img src="Pic/logo.webp" alt="LOGO"></div>
+    </div>
+</div>
+<div class="main-content">
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container mx-auto">
+            <!-- Logo -->
+            <a class="navbar-brand" href="Musique.html">AMARG</a>
+            <!-- Bouton de navigation pour les écrans mobiles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Contenu de la navbar -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mx-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link me-4" href="index.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-4" href="Musique.html">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-4" href="#">Features</a>
+                    </li>
+                </ul>
+                <!-- Boutons de connexion et d'inscription -->
+                <div>
+                    <button class="btn BtnLog me-3" type="button">
+                        <strong>Log In</strong>
+                    </button>
+                    <button class="btn BtnSign" type="button">
+                        <strong>Sign Up</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="titre">
+    <h1>Get started</h1>
+</div>
+<!-- Les div sont 20. -->
+<div class="row mx-0 haut_bas  ">
+    <div class="col cacher animate-1"></div>
+    <div class="col   animate-2"></div>
+    <div class="col   animate-3"> </div>
+    <div class="col cacher animate-4"> </div>
+    <div class="col   animate-5"></div>
+    <div class="col  animate-1"></div>
+    <div class="col  cacher animate-2"></div>
+    <div class="col   animate-3"> </div>
+    <div class="col   animate-4"> </div>
+    <div class="col   animate-5"></div>
+    <div class="col cacher  animate-3"> </div>
+    <div class="col  animate-1"></div>
+    <div class="col   animate-2"></div>
+    <div class="col   animate-3"> </div>
+    <div class="col   animate-4"> </div>
+    <div class="col cacher  animate-5"></div>
+    <div class="col   animate-4"> </div>
+    <div class="col   animate-3"> </div>
+    <div class="col  cacher animate-2"> </div>
+    <div class="col   animate-1"> </div>
+</div>
+<!-- ------------------------------------ -->
+<div class="container-fluid">
+    <div class="row ">
+        <div class=" formulaire col-8 col-md-7 col-lg-5 mx-auto">
+            <div id="signup" >
+                <h2 class="text-center mb-4">Sign up</h2>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="login">
+                        <button type="submit" class="btn button">Sign up</button>
+                    </div>
+                </form>
+                <p class="text-center mt-3">
+                    Good to see you again!
+                    <span class="changement" onclick="toggleForm('login')"> Log in</span>
+                </p>
+            </div>
+            <div id="login" style=" display: none !important;">
+                <h2 class="text-center mb-4">Log in</h2>
+                <form>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email or Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <div class="login">
+                        <button type="submit" class="btn button">Log in</button>
+                    </div>
+                </form>
+                <p class="text-center mt-3">
+                    <span class="changement" onclick="toggleForm('signup')">Sign up  </span>
+                    and start your journey with us today!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleForm(formId) {
+        document.getElementById('login').style.display = formId === 'login' ? 'block' : 'none';
+        document.getElementById('signup').style.display = formId === 'signup' ? 'block' : 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const loadingOverlay = document.getElementById('loading-overlay');
+    setTimeout(() => {
+    loadingOverlay.style.opacity = '0';
+    loadingOverlay.style.transition = 'opacity 0.5s ease-out';
+    setTimeout(() => {
+    loadingOverlay.style.display = 'none';
+    }, 5000);
+    }, 2000);
+    });
+
+</script>
+</body>
+</html>

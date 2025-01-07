@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Équipe Rijal">
+  <meta http-equiv="refresh" content="300">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMARG | Music</title>
+  <link rel="icon" href="Pic/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/Musique.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!------------------------------div du loading-------------------------------->
+<div id="loading-overlay">
+  <div id="loading-logo">
+    <div><img src="Pic/logo.webp" alt="LOGO"></div>
+  </div>
+</div>
+<!------------------------------menu header-------------------------------->
+<header class="main-content">
+  <div class="search-container ">
+    <form id="searchForm" class="search-form">
+      <div class="input-group   ms-3">
+        <button class="btn search-btn" type="submit">
+          <i class="bi bi-search p-2"></i>
+        </button>
+        <input id="searchInput" type="search" class="form-control search-input" placeholder="Artists, tracks, podcasts..." aria-label="Search">
+      </div>
+    </form>
+  </div>
+  <div class="login-buttons me-3">
+    <a href="index.html"><button class="btn plans  " >Plans</button></a>
+    <a href="formulaire.html"><button class="btn BtnLog  ms-3" >Log in</button></a>
+    <a href="formulaire.html"><button class="btn BtnSign ms-3" >Sign up</button></a>
+  </div>
+</header>
+<!------------------------------barre du menu a gauche-------------------------------->
+<aside class=" sidebar">
+    <div class="aside_cacher nav flex-column mb-3 logo ">
+        <a class="H3" href="index.html" >AMARG</a>
+        <a href="index.html" class="nav-link "><i class="bi bi-house-door me-2"></i> Home</a>
+        <a href="#" class="nav-link"><i class="bi bi-compass me-2"></i> Explore</a>
+    </div>
+    <!------------------------------- une div cacher ----------------------------------->
+    <div class="NON_visible ">
+        <a href="index.html" class="nav-link "><i class="bi bi-house-door me-2"></i></a>
+        <a href="#" class="nav-link"><i class="bi bi-compass me-2"></i></a>
+    </div>
+    <!------------------------------------------------------------------>
+    <div class="aside_cacher">
+      <h6 class=" mb-4 text-white  ">Playlists</h6>
+      <div class=" custom_aside  text-white">
+        <p>Create your first playlist</p>
+        <p>Name it, add one song or more and we'll handle the rest!</p>
+        <button class="btn BtnLog  btn-sm  ">Create a playlist</button>
+      </div>
+  </div>
+</aside>
+
+<!------------------------------main (page initiale ) -------------------------------->
+<main class=" custom_main ">
+    <div class="row  px-5 " >
+      <!------------------------------New Releases -------------------------------->
+      <div class="col viewall ">
+        <h2> New Releases</h2>
+      </div>
+      <div class="row viewall  ">
+        <div class="col  ">
+          <p>Fresh picks of the week <button class="btn heart  btn-sm  ">View all</button> </p>
+        </div>
+      </div>
+      <div class="row mx-0" >
+        <div class=" col-sm-6 col-md-6 col-lg   carts">
+          <img src="Pic/cheb_l3arby.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Cheb larbi</strong> <br>
+          <span >Wah Aliyam Wah - 5M Views</span>
+        </div>
+        <div class=" col-sm col-md col-lg   carts">
+          <img src="Pic/112.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Pause Flow</strong><br>
+          <span>EP 112 - 39M Views</span>
+        </div>
+        <div class=" col-sm-6 col-md-6 col-lg   carts">
+          <img src="Pic/cameleon.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>ElgrandeToto</strong><br>
+          <span>Album Cameleon - 100M Views</span>
+        </div>
+        <div class="col-sm col-md col-lg   carts">
+          <img src="Pic/yakine.jpg" alt="artist">
+          <div class="cacher les_i">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Morphine</strong><br>
+          <span>Album Yakine - 15M Views</span>
+        </div>
+      </div>
+      <!------------------------------Top Artists-------------------------------->
+      <div class="row viewall  ">
+        <div class="col ">
+          <p>Top Artists <button class="btn heart  btn-sm  ">View all</button> </p>
+        </div>
+      </div>
+      <!------------------------------Top Artists ligne 1 -------------------------------->
+      <div class="row mx-0" >
+        <div class=" col-sm-6 col-md-6 col-lg   carts">
+          <img src="Pic/Billie.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Billie eilish</strong> <br>
+          <span >110 million - followers</span>
+        </div>
+        <div class=" col-sm col-md col-lg   carts">
+          <img src="Pic/drake2.webp" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Drake</strong><br>
+          <span>130 million - followers</span>
+        </div>
+        <div class=" col-sm-6 col-md-6 col-lg   carts">
+          <img src="Pic/eminem.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Eminem</strong><br>
+          <span>35 million - followers</span>
+        </div>
+        <div class="col-sm col-md col-lg   carts">
+          <img src="Pic/kendrick%20.jpg" alt="artist">
+          <div class="cacher les_i">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Kendrick Lamar</strong><br>
+          <span>17 million - followers</span>
+        </div>
+      </div>
+      <!------------------------------Top Artists ligne 2 -------------------------------->
+      <div class="row mx-0" >
+        <div class=" col-sm-6 col-md-6 col-lg   carts">
+          <img src="Pic/oudaden.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Oudaden</strong> <br>
+          <span >1 million - followers</span>
+        </div>
+        <div class=" col-sm col-md col-lg   carts">
+          <img src="Pic/Tabaamrant.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Fatima Tabaamrant</strong><br>
+          <span>700,000 - followers</span>
+        </div>
+        <div class=" col-sm-6 col-md-6 col-lg   carts">
+          <img src="Pic/imaghrane.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Laarbi Imghran</strong><br>
+          <span>500,000 - followers</span>
+        </div>
+        <div class="col-sm col-md col-lg   carts">
+          <img src="Pic/inerzaf.jpg" alt="artist">
+          <div class="cacher les_i">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Hamid Inerzaf</strong><br>
+          <span>300,000 - followers</span>
+        </div>
+      </div>
+      <!------------------------------Top Artists ligne 2 -------------------------------->
+      <div class="row mx-0" >
+        <div class=" col-sm-6 col-md-6 col-lg   carts">
+          <img src="Pic/Hassni.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Cheb Hasni</strong> <br>
+          <span >173 000 - followers</span>
+        </div>
+        <div class=" col-sm col-md col-lg   carts">
+          <img src="Pic/Akil.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Cheb Akil</strong><br>
+          <span>700,414 - followers</span>
+        </div>
+        <div class=" col-sm-6 col-md-6 col-lg   carts">
+          <img src="Pic/khaled.jpg" alt="artist">
+          <div class="cacher">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Cheb Khaled</strong><br>
+          <span>957,000 - followers</span>
+        </div>
+        <div class="col-sm col-md col-lg   carts">
+          <img src="Pic/chouchou.jpg" alt="artist">
+          <div class="cacher les_i">
+            <button class="heart-fill"><i class="bi bi-heart-fill"></i></button>
+            <button class="play-fill"><i class="bi bi-play-fill"></i></button>
+            <button class="three-dots"><i class="bi bi-three-dots"></i></button>
+          </div>
+          <strong>Cheba Chouchou</strong><br>
+          <span>326,000 - followers</span>
+        </div>
+      </div>
+    </div>
+</main>
+<!----------------------------- Barre de musique -------------------------------->
+<div class="player d-flex justify-content-between align-items-center text-white">
+  <div class="d-flex align-items-center">
+    <i class="bi bi-music-note me-3 "></i>
+    <span>00:00</span>
+  </div>
+  <div class="player-controls d-flex align-items-center ">
+    <i class="bi bi-shuffle mx-3"></i>
+    <i class="bi bi-skip-start mx-3"></i>
+    <i class="bi bi-play-circle-fill mx-3 fs-4"></i>
+    <i class="bi bi-skip-end mx-3"></i>
+    <i class="bi bi-repeat mx-3"></i>
+  </div>
+  <div class="d-flex align-items-center">
+    <i class="bi bi-volume-up mx-3"></i>
+    <span>00:00</span>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const loadingOverlay = document.getElementById('loading-overlay');
+    setTimeout(() => {
+    loadingOverlay.style.opacity = '0';
+    loadingOverlay.style.transition = 'opacity 0.5s ease-out';
+    setTimeout(() => {
+    loadingOverlay.style.display = 'none';
+  }, 5000);
+  }, 2000);
+  });
+</script>
+</body>
+</html>

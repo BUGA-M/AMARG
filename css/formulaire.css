@@ -1,0 +1,341 @@
+*{
+    box-sizing: border-box !important;
+    padding: 0  !important;
+    margin: 0  !important ;
+}
+body{
+    background-color:#141414 !important;
+    /*overflow-x: hidden !important;*/
+}
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.13);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #39f30e, #c4fac7, #39f30e);
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(65, 65, 65, 0.3);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #c4fac7, #39f30e, #c4fac7);
+}
+@font-face {
+    font-family: 'Font1';
+    src: url('../Fonts/Fontspring-DEMO-agilesans-extrabolditalic.otf') format('opentype')
+}
+@font-face {
+    font-family: 'Font2';
+    src: url('../Fonts/Fontspring-DEMO-agilesans-lightitalic.otf')  format('woff2')
+}
+@font-face {
+    font-family: 'Font3';
+    src: url('../Fonts/police1.ttf')  format('truetype')
+}
+@font-face {
+    font-family: 'Font4';
+    src: url('../Fonts/police2.ttf') format('opentype')
+}
+
+/*----------------------------------les media queries-----------------------------------*/
+@media (max-width: 742px){
+    .navbar-brand{
+        margin:0 0 0 15px!important;
+    }
+    .navbar-toggler{
+        margin:0 15px 0 0 !important;
+    }
+    .amarg-div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .nav-link{
+        margin-bottom: 8px !important;
+    }
+    .formulaire{
+        top: 160% !important;
+        transform: translate(-50%, -160%) !important;
+    }
+    .cacher {
+        display: none;
+    }
+}
+/************************************** Barre de navigation ************************************/
+.navbar {
+    background-color: #141414 !important;
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid rgba(93, 93, 93, 0.29);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.collapse{
+    padding-left:1.2rem !important; ;
+}
+.navbar-brand {
+    color: #79f60c !important;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    border: 1px solid transparent !important;
+    font-family: 'Font4', Arial, sans-serif;
+    font-size: 20px !important;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.nav-link:hover {
+    color: #79f60c !important;
+    border-bottom: 1px solid #79f60c !important;
+}
+
+.navbar-toggler {
+    color: #79f60c !important;
+    border: 1px solid #79f60c !important;
+    padding: 0.5rem !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    background-color: transparent !important;
+}
+.navbar-toggler-icon::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 -6px 0 white, 0 6px 0 white;
+}
+/*------------------- non du site animé --------------------*/
+.container > a {
+    font-family: 'Font1', Arial, sans-serif;
+    font-size: 35px;
+    background-image: url("../Pic/BG_title.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: background_mouvement 40s infinite;
+}
+
+/*------------- bouton Sign Up ------------------*/
+.BtnSign {
+    position: relative;
+    overflow: hidden;
+    background-color: #79f60c !important;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: bold !important;
+    border: none;
+    padding: 0.5rem 1rem !important;
+    transition: transform 0.3s ease;
+}
+
+.BtnSign:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(24, 24, 24);
+    border: 1px solid #000000;
+    border-radius: 0 25px 0 0;
+    transform: scaleY(0) scaleX(0);
+    transform-origin: left bottom;
+    transition: transform 1s;
+    z-index: -1;
+}
+
+.BtnSign:hover {
+    color: #79f60c !important;
+}
+
+.BtnSign:hover:before {
+    transform: scaleY(1) scaleX(1);
+}
+
+.BtnSign:active {
+    transform: scale(0.95);
+}
+
+/*-------------------bouton Log In-------------------- */
+.BtnLog {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #79f60c !important;
+    font-weight: bold !important;
+    color: #79f60c !important;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0.5rem 1rem !important;
+    transition: transform 0.3s ease;
+}
+
+.BtnLog:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #79f60c;
+    border: 1px solid #79f60c;
+    border-radius: 0 25px 0 0;
+    transform: scaleY(0) scaleX(0);
+    transform-origin: left bottom;
+    transition: transform 1s;
+    z-index: -1;
+}
+
+.BtnLog:hover {
+    color: black !important;
+}
+
+.BtnLog:hover::before {
+    transform: scaleY(1) scaleX(1);
+}
+
+.BtnLog:active {
+    transform: scale(0.95);
+}
+/******************************* main *********************************/
+
+/*------ titre (get started) -------*/
+.titre h1{
+    font-family: 'Font1',arial,sans-serif;
+    color: rgb(255, 255, 255) !important;
+    font-size: 3em !important;
+    text-align: center;
+    margin: 40px 0 !important;
+}
+/********************** formulaires ***********************/
+.formulaire {
+    position: absolute;
+    top: 155%;
+    left: 50%;
+    transform: translate(-50%, -155%);
+    background: transparent !important;
+    backdrop-filter: blur(30px);
+    padding: 20px !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.29);
+    border-radius: 10px;
+}
+/*------------ h2 (titre de formule) --------------*/
+.formulaire h2{
+    font-family: 'Font1', Arial, sans-serif !important;
+    color: #030303 !important;
+    font-size: 40px !important;
+    margin: 0 0 30px 0 !important;
+    text-align: center;
+}
+/*------------ button log in --------------*/
+.login{
+    width:80%;
+    margin: auto !important;
+}
+.login .button {
+    font-family: 'Font1', Arial, sans-serif !important;
+    font-size: 25px !important;
+
+    color: #0dc215 !important;
+    background-color: #000000 !important;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 20px !important;
+    padding: 2px 0 !important;
+    transition: background-color 0.45s ease, color 0.45s ease;
+}
+.button:hover {
+    background-color: #0dc215 !important;
+    color: #000000 !important;
+}
+/*------------------span du changement entre (log in) et (sign up)-------------------------*/
+.changement {
+    font-family: 'Font2', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    color: #000000;
+}
+.changement:hover {
+    color: #79f60c;
+    text-decoration: underline;
+}
+/*---------------------INPUT-------------------*/
+.mb-3{
+    width: 80%;
+    margin: auto !important;
+}
+.form-control:focus{
+    border: 2px solid #0dc215 !important;
+    box-shadow: inset 0 0 8px rgba(7, 28, 0, 0.94) !important;
+}
+.form-control {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    padding: 8px 0 8px 10px !important;
+    border-radius: 20px;
+}
+.form-control::placeholder{
+    font-family: 'Font2', Arial, sans-serif !important;
+    color: #252525 !important;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/*--------------------- background-animation --------------------*/
+.haut_bas{
+    background-color: rgba(0, 0, 0, 0) !important;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.animate-1 {
+    background: linear-gradient(135deg , #00ff00, #022f05,#00ff00);
+    background-size: 100% 100%;
+    border-radius:10px 10px 0 0;
+    animation: slide-up 1.5s infinite;
+    animation-delay: 0.5s;
+    /*padding-bottom: 40rem !important;*/
+}
+.animate-2 {
+    background: linear-gradient(135deg , #00ff00, #022f05,#00ff00);
+    background-size: 100% 100%;
+    border-radius:10px 10px 0 0;
+    animation: slide-up 1.5s infinite , gradientAnimation 2s infinite;
+    animation-delay: 0.8s;
+}
+.animate-3 {
+    background: linear-gradient(135deg , #00ff00, #022f05,#00ff00);
+    background-size: 100% 100%;
+    border-radius:10px 10px 0 0;
+    animation: slide-up 1.5s infinite;
+    animation-delay: 1s;
+}
+.animate-4 {
+    background: linear-gradient(135deg , #00ff00, #022f05,#00ff00);
+    background-size: 100% 100%;
+    border-radius:10px 10px 0 0;
+    animation: slide-up 1.5s infinite;
+    animation-delay: 1.2s;
+}
+.animate-5 {
+    background: linear-gradient(135deg , #00ff00, #022f05,#00ff00);
+    background-size: 100% 100%;
+    border-radius:10px 10px 0 0;
+    animation: slide-up 1.5s infinite;
+    animation-delay: 1.5s;
+}
