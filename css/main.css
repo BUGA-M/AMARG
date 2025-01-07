@@ -262,6 +262,9 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+.H1{
+    font-family: 'Font1', Arial, sans-serif !important;
+}
 
 /*---------------------la section des plans------------------ */
 .plans {
@@ -389,7 +392,7 @@ h1 {
 
 /*--------------------------- titre de la section ------------*/
 .gift_part-h1 {
-    font-family: 'Font1', Arial, sans-serif;
+    font-family: 'Font1', Arial, sans-serif ;
     color: #141414 !important;
     font-size: 4em !important;
     margin-bottom: 20px !important;
