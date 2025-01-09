@@ -253,7 +253,8 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 20px !important;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.29);
     border-radius: 10px;
-    max-height:  95vh;
+    max-height: 500px !important;
+    height:  90% !important;
     overflow-y: scroll !important;
     z-index: 1000 !important;
     scrollbar-width: none;
