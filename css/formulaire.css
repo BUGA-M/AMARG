@@ -11,12 +11,6 @@ html, body {
     padding: 0;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh !important;
-}
-
 body::-webkit-scrollbar {
     width: 12px;
 }
@@ -163,7 +157,7 @@ body::-webkit-scrollbar-thumb:hover {
     transition: transform 0.3s ease;
 }
 
-.BtnSign:before {
+.BtnSign::before {
     content: "";
     position: absolute;
     top: 0;
@@ -204,7 +198,7 @@ body::-webkit-scrollbar-thumb:hover {
     transition: transform 0.3s ease;
 }
 
-.BtnLog:before {
+.BtnLog::before {
     content: "";
     position: absolute;
     top: 0;
@@ -253,12 +247,16 @@ body::-webkit-scrollbar-thumb:hover {
     position: absolute;
     top: 0 !important;
     left: 50%;
-    transform: translate(-50%) !important;
+    transform: translate(-50% , 0) !important;
     background: transparent !important;
     backdrop-filter: blur(30px);
     padding: 20px !important;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.29);
     border-radius: 10px;
+    max-height:  95vh;
+    overflow-y: scroll !important;
+    z-index: 1000 !important;
+    scrollbar-width: none;
 }
 
 /*------------ h2 (titre de formule) --------------*/
