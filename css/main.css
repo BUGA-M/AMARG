@@ -448,8 +448,8 @@ h1 {
 }
 
 .image:hover > :not(:hover) {
-    filter: blur(5px) !important;
-    opacity: 0.9;
+    filter: blur(4px) !important;
+    opacity: 0.92;
 
 }
 /*--------------- Image 1 ----------------*/
@@ -502,7 +502,7 @@ h1 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.73);
     z-index: 1;
     animation: Haut_bas_img3 5.5s infinite ;
-    animation-delay: 2s;
+    animation-delay: 2s ;
     opacity: 1;
     transition: opacity 1.5s ease, filter 1.5s ease;
 }
