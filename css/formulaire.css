@@ -1,12 +1,22 @@
-*{
+* {
     box-sizing: border-box !important;
-    padding: 0  !important;
-    margin: 0  !important ;
+    padding: 0 !important;
+    margin: 0 !important;
 }
-body{
-    background-color:#141414 !important;
-    /*overflow-x: hidden !important;*/
+
+html, body {
+    background-color: #141414 !important;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+}
+
 body::-webkit-scrollbar {
     width: 12px;
 }
@@ -25,48 +35,53 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #c4fac7, #39f30e, #c4fac7);
 }
+
 @font-face {
     font-family: 'Font1';
     src: url('../Fonts/Fontspring-DEMO-agilesans-extrabolditalic.otf') format('opentype')
 }
+
 @font-face {
     font-family: 'Font2';
-    src: url('../Fonts/Fontspring-DEMO-agilesans-lightitalic.otf')  format('woff2')
+    src: url('../Fonts/Fontspring-DEMO-agilesans-lightitalic.otf') format('woff2')
 }
+
 @font-face {
     font-family: 'Font3';
-    src: url('../Fonts/police1.ttf')  format('truetype')
+    src: url('../Fonts/police1.ttf') format('truetype')
 }
+
 @font-face {
     font-family: 'Font4';
     src: url('../Fonts/police2.ttf') format('opentype')
 }
 
 /*----------------------------------les media queries-----------------------------------*/
-@media (max-width: 742px){
-    .navbar-brand{
-        margin:0 0 0 15px!important;
+@media (max-width: 742px) {
+    .navbar-brand {
+        margin: 0 0 0 15px !important;
     }
-    .navbar-toggler{
-        margin:0 15px 0 0 !important;
+
+    .navbar-toggler {
+        margin: 0 15px 0 0 !important;
     }
+
     .amarg-div {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 15px;
     }
-    .nav-link{
+
+    .nav-link {
         margin-bottom: 8px !important;
     }
-    .formulaire{
-        top: 160% !important;
-        transform: translate(-50%, -160%) !important;
-    }
+
     .cacher {
         display: none;
     }
 }
+
 /************************************** Barre de navigation ************************************/
 .navbar {
     background-color: #141414 !important;
@@ -74,9 +89,11 @@ body::-webkit-scrollbar-thumb:hover {
     border-bottom: 1px solid rgba(93, 93, 93, 0.29);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
-.collapse{
-    padding-left:1.2rem !important; ;
+
+.collapse {
+    padding-left: 1.2rem !important;
 }
+
 .navbar-brand {
     color: #79f60c !important;
     font-weight: bold;
@@ -90,6 +107,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 20px !important;
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
+
 .nav-link:hover {
     color: #79f60c !important;
     border-bottom: 1px solid #79f60c !important;
@@ -106,6 +124,7 @@ body::-webkit-scrollbar-thumb:hover {
     position: relative;
     background-color: transparent !important;
 }
+
 .navbar-toggler-icon::before {
     content: "";
     position: absolute;
@@ -117,6 +136,7 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translate(-50%, -50%);
     box-shadow: 0 -6px 0 white, 0 6px 0 white;
 }
+
 /*------------------- non du site animé --------------------*/
 .container > a {
     font-family: 'Font1', Arial, sans-serif;
@@ -211,45 +231,54 @@ body::-webkit-scrollbar-thumb:hover {
 .BtnLog:active {
     transform: scale(0.95);
 }
+
 /******************************* main *********************************/
 
 /*------ titre (get started) -------*/
-.titre h1{
-    font-family: 'Font1',arial,sans-serif;
+.titre {
+    position: relative;
+    top: 0;
+}
+
+.titre h1 {
+    font-family: 'Font1', arial, sans-serif;
     color: rgb(255, 255, 255) !important;
     font-size: 3em !important;
     text-align: center;
     margin: 40px 0 !important;
 }
+
 /********************** formulaires ***********************/
 .formulaire {
     position: absolute;
-    top: 155%;
+    top: 0 !important;
     left: 50%;
-    transform: translate(-50%, -155%);
+    transform: translate(-50%) !important;
     background: transparent !important;
     backdrop-filter: blur(30px);
     padding: 20px !important;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.29);
     border-radius: 10px;
 }
+
 /*------------ h2 (titre de formule) --------------*/
-.formulaire h2{
+.formulaire h2 {
     font-family: 'Font1', Arial, sans-serif !important;
     color: #030303 !important;
     font-size: 40px !important;
     margin: 0 0 30px 0 !important;
     text-align: center;
 }
+
 /*------------ button log in --------------*/
-.login{
-    width:80%;
+.login {
+    width: 80%;
     margin: auto !important;
 }
+
 .login .button {
     font-family: 'Font1', Arial, sans-serif !important;
     font-size: 25px !important;
-
     color: #0dc215 !important;
     background-color: #000000 !important;
     border-radius: 20px;
@@ -258,10 +287,12 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 2px 0 !important;
     transition: background-color 0.45s ease, color 0.45s ease;
 }
+
 .button:hover {
     background-color: #0dc215 !important;
     color: #000000 !important;
 }
+
 /*------------------span du changement entre (log in) et (sign up)-------------------------*/
 .changement {
     font-family: 'Font2', Arial, sans-serif;
@@ -270,25 +301,30 @@ body::-webkit-scrollbar-thumb:hover {
     cursor: pointer;
     color: #000000;
 }
+
 .changement:hover {
     color: #79f60c;
     text-decoration: underline;
 }
+
 /*---------------------INPUT-------------------*/
-.mb-3{
+.mb-3 {
     width: 80%;
     margin: auto !important;
 }
-.form-control:focus{
+
+.form-control:focus {
     border: 2px solid #0dc215 !important;
     box-shadow: inset 0 0 8px rgba(7, 28, 0, 0.94) !important;
 }
+
 .form-control {
     background-color: rgba(255, 255, 255, 0.9) !important;
     padding: 8px 0 8px 10px !important;
     border-radius: 20px;
 }
-.form-control::placeholder{
+
+.form-control::placeholder {
     font-family: 'Font2', Arial, sans-serif !important;
     color: #252525 !important;
     font-size: 16px;
@@ -296,11 +332,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /*--------------------- background-animation --------------------*/
-.haut_bas{
+.haut_bas {
     background-color: rgba(0, 0, 0, 0) !important;
     width: 100%;
-    height: 100vh;
-    position: relative;
+    min-height: 100% !important;
+    position: relative !important;
 }
 
 .animate-1 {

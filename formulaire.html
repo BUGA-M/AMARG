@@ -82,11 +82,8 @@
     <div class="col   animate-3"> </div>
     <div class="col  cacher animate-2"> </div>
     <div class="col   animate-1"> </div>
-</div>
-<!-- ------------------------------------ -->
-<div class="container-fluid">
-    <div class="row ">
-        <div class=" formulaire col-8 col-md-7 col-lg-5 mx-auto">
+    <div class=" col-8 col-md-7 col-lg-5 mx-auto formulaire ">
+        <div class="row ">
             <div id="signup" >
                 <h2 class="text-center mb-4">Sign up</h2>
                 <form>
@@ -132,7 +129,7 @@
         </div>
     </div>
 </div>
-
+<!-- ---------------- Script -------------------- -->
 <script>
     function toggleForm(formId) {
         document.getElementById('login').style.display = formId === 'login' ? 'block' : 'none';
@@ -140,16 +137,15 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-    const loadingOverlay = document.getElementById('loading-overlay');
-    setTimeout(() => {
-    loadingOverlay.style.opacity = '0';
-    loadingOverlay.style.transition = 'opacity 0.5s ease-out';
-    setTimeout(() => {
-    loadingOverlay.style.display = 'none';
-    }, 5000);
-    }, 2000);
+        const loadingOverlay = document.getElementById('loading-overlay');
+        setTimeout(() => {
+            loadingOverlay.style.opacity = '0';
+            loadingOverlay.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 5000);
+        }, 2000);
     });
-
 </script>
 </body>
 </html>
