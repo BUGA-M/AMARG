@@ -77,34 +77,34 @@
 
 @keyframes Haut_bas_img1 {
     0% {
-        transform: rotate(10deg) translateY(-5%);
-    }
-    50% {
         transform: rotate(10deg) translateY(0%);
     }
+    50% {
+        transform: rotate(10deg) translateY(7%);
+    }
     100% {
-        transform: rotate(10deg) translateY(-5%);
+        transform: rotate(10deg) translateY(0%);
     }
 }
 @keyframes Haut_bas_img2 {
     0% {
-        transform: rotate(5deg) translateY(-5%);
-    }
-    50% {
         transform: rotate(5deg) translateY(0%);
     }
+    50% {
+        transform: rotate(5deg) translateY(7%);
+    }
     100% {
-        transform: rotate(5deg) translateY(-5%);
+        transform: rotate(5deg) translateY(0%);
     }
 }
 @keyframes Haut_bas_img3 {
     0% {
-        transform: rotate(-10deg) translateY(-5%);
-    }
-    50% {
         transform: rotate(-10deg) translateY(0%);
     }
+    50% {
+        transform: rotate(-10deg) translateY(7%);
+    }
     100% {
-        transform: rotate(-10deg) translateY(-5%);
+        transform: rotate(-10deg) translateY(0%);
     }
 }
